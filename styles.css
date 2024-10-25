@@ -1,42 +1,69 @@
-﻿body {
+/* style.css */
 
-
-{
+/* Thiết lập cho body */
+body {
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
 
-header {
-    background-color: #f0f0f0;
-}
-
+/* Kiểu dáng cho navigation */
 nav {
-    background-color: #333;
-    color: white;
+    display: flex; /* Sử dụng flexbox */
+    justify-content: space-around; /* Căn giữa các mục */
+    background-color: #333; /* Màu nền */
+    padding: 10px; /* Padding cho navigation */
 }
 
-main {
-    background-color: #fafafa;
-    font-size: 18px;
+nav a {
+    color: white; /* Màu chữ */
+    text-decoration: none; /* Bỏ gạch chân */
+    padding: 10px 15px; /* Padding cho link */
 }
 
-footer {
-    background-color: #f1f1f1;
+nav a:hover {
+    background-color: #575757; /* Màu nền khi hover */
 }
 
-li {
-    display: inline-block;
-    width: 150px;
+/* Kiểu dáng cho hình ảnh */
+img {
+    border: 5px solid #ddd; /* Đường viền cho hình ảnh */
+    border-radius: 10px; /* Bo tròn các góc */
+    padding: 10px; /* Padding cho hình ảnh */
+    width: 100%; /* Đặt hình ảnh chiếm toàn bộ chiều rộng */
+    max-width: 400px; /* Giới hạn chiều rộng tối đa */
 }
 
-h1 {
-    text-align: center;
-    font-family: 'Georgia', serif;
-    color: #333;
+/* Kiểu dáng cho liên kết "Skip to Main Content" */
+.skip-link {
+    position: absolute; /* Đặt liên kết ở vị trí tuyệt đối */
+    left: -9999px; /* Ẩn liên kết ra khỏi màn hình */
 }
 
-p {
-    line-height: 1.6;
+.skip-link:focus {
+    left: 10px; /* Hiện liên kết khi có focus */
+    top: 10px; /* Đặt vị trí */
+    z-index: 1000; /* Đảm bảo nó ở trên các phần tử khác */
+    background-color: yellow; /* Màu nền */
+    padding: 10px; /* Padding cho liên kết */
+    color: black; /* Màu chữ */
 }
 
+/* Lưới cho một phần tử cha */
+.grid-container {
+    display: grid; /* Sử dụng grid */
+    grid-template-columns: repeat(2, 1fr); /* Tạo 2 cột */
+    gap: 10px; /* Khoảng cách giữa các phần tử */
+}
 
+/* Kiểu dáng cho các phần tử trong lưới */
+.grid-item {
+    background-color: #f2f2f2; /* Màu nền cho item */
+    padding: 20px; /* Padding cho item */
+    text-align: center; /* Căn giữa chữ */
+}
+
+/* Nth-child selector */
+.grid-item:nth-child(even) {
+    border-radius: 20px; /* Bo tròn góc cho các item chẵn */
+}
